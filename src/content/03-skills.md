@@ -1,27 +1,16 @@
 ## Skills
 
-### Proficient in
 
-- Designing and building model pipelines using **Tensorflow** and **Pytorch**,
-- Working with complex architectures such as *Deep Convolutional GANs* on multi class datasets,
-- Implementing **RAG** systems on LLMs using **Vector Databases**,
-- Deploying LLMs in production using **LangChain**,
-- Implementing CI/CD pipelines using **Jenkins**.
-- Deploying and building **Docker** containers and stacks,
-- Developing IAC infrastructure using **Ansible** and **Terraform**,
-- Setting up cloud environments using **Cloud-Init**.
-- Using **Linux** systems on the daily for 10 years,
-- producing **clean and readable code** using **design patterns**,
-- solving **complex problems**,
-- **frameworks** (Tensorflow, PyTorch), **other tools** (Git).
+- Writing C# behavior in **Unity** for intended purposes
+- Having a good understanding of Object Orientated Programming to created modular based scripts
+- The Unity Real - Time engine to create games and experiences
+- The AR Foundation FrameWork to create mobile AR applications
+- The **XR Interaction toolkit** in Unity to create VR Experiences
+- Unity Packages like **Splines and NewtonSoft**
+-  
+- Using **Blender 3D** to create 3D models for projects
+- Creating Procedural Shaders to texture object in blender
 
-### Knowledge of
-
-- Distributed deployment using **Kubernetes**,
-- building efficient **API services**,
-- Prototyping **accessible and user-friendly interfaces**,
-- Automating tasks using **Bash scripts** and **POSIX commands**,
-- I use arch btw.
 
 ### Additional skills
 
