@@ -39,6 +39,26 @@ as game-jams.
 to make initial design
   - Made story elements for the game, including character back story, world lore, etc
 
+  > _Unity_ _Notion_ _Discord_
+
+  - ##### April 2023 - Present
+
+  ### Gen - Y
+#### Board Member of AR/VR Domain
+  
+  - Managed the Domain and maintained interest in the field among members
+
+  > _Unity_ _AR Foundation_
+
+
+  ### Born
+#### Human
+  
+  - Came into this world
+  - Was provided a Security key linked to biological physiology (D.N.A)
+
+  > _India_
+
 <style lang="scss">
   @import '../styles/theme.scss';
 
