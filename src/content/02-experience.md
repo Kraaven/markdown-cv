@@ -41,7 +41,7 @@ to make initial design
 
   > _Unity_ _Notion_ _Discord_
 
-  - ##### April 2023 - Present
+##### April 2023 - Present
 
   ### Gen - Y
 #### Board Member of AR/VR Domain
