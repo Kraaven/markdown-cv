@@ -2,4 +2,4 @@
 
 # Dhruv Bhojaraj
 
-and I'm a MLops engineer.
+and I'm a XR engineer.

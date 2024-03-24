@@ -6,17 +6,15 @@
 
   #### Board Member
   
-• QS award-winning student-led research lab of 5 departments dedicated to working
+QS award-winning student-led research lab of 5 departments dedicated to working
 on latest technologies in their fields, including ML, Game and App Development,
 Extended Reality, Cryptography/Cyber-Security and IOT.
-• Handled Management of Pausch Lab, taking interviews and handling events such
+
+  - Handled Management of Pausch Lab, taking interviews and handling events such
 as game-jams.
+  - Participated in Events and contributed to Lab related Work
 
-  - Developed and deployed Transformers models for verification, integrating Time series models to solve real‑world problems,
-  - Optimized verification performance by 15% and speed by 25% through Signal Processing,
-  - Working with a team of like minded individuals.
-
-  > _Python_ _Pytorch_
+  > _Management_
 
 - ##### Jan 2023 – Present
 
