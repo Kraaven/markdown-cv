@@ -1,12 +1,16 @@
 ## Experience
 
-- ##### February 2024 – Present
+- ##### Janaury 2023 – Present
 
   ### HyperVerge
 
-  #### Research Fellow
+  #### Board Member
   
-  Working with the team at HyprVerge to research on new problems and learn along the way,
+• QS award-winning student-led research lab of 5 departments dedicated to working
+on latest technologies in their fields, including ML, Game and App Development,
+Extended Reality, Cryptography/Cyber-Security and IOT.
+• Handled Management of Pausch Lab, taking interviews and handling events such
+as game-jams.
 
   - Developed and deployed Transformers models for verification, integrating Time series models to solve real‑world problems,
   - Optimized verification performance by 15% and speed by 25% through Signal Processing,

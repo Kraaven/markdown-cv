@@ -1,14 +1,13 @@
 ## About me
 
-MLOps Engineer with deep interests in both fields.
+An Aspiring XR developer with a Quest 2 in my hands...
 
 In love with coding, sound, and visuals.
 
-- [arjf.me](https://arjf.me)
-- [arjf@protonmail](mailto:arjf@protonmail.com)
+- [kraaven.me](https://kraaven.me)
+- [dhruv.bhojaraj@gmail.com](mailto:dhruv.bhojaraj@gmail.com)
 
 ### Follow
 
-- [github.com/ajdjyt](https://github.com/ajdjyt)
-- [/in/ArnavFernandes](https://linkedin.com/in/arnavfernandes)
-- [@arnav_fernandes](https://x.com/arnav_fernandes)
+- [github.com/Kraaven](https://github.com/Kraaven)
+- [/in/DhruvBhojaraj](https://www.linkedin.com/in/dhruv-bhojaraj-787485250/)
