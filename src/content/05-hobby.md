@@ -1,13 +1,15 @@
 ## After Hours
 
-### Cars and F1
+### Cooking
 
-Looking and speccing my dream cars while watching the F1 GP really gets me going.
+- I like making food for other people, generally taking up a challenge and having cook - offs with other people
+- Like to try making new Recipes and bake **sweets**
 
-### Music production
+### Games
 
-I love making and mixing music.
+- I love playing games and experiencing new stories mechanics
+- I am a sucker for puzzle games, like **Portal**, Portal 2, Quantum Conundrum, Q.U.B.E, Relicta, The RoomVR
 
-### Photography
+### Sleeping
 
-Taking a good portrait photo, or Telephoto always makes me smile.
+- I need my 8 hours of sleep.

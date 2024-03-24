@@ -9,17 +9,15 @@
 - Unity Packages like **Splines and NewtonSoft**
 -  
 - Using **Blender 3D** to create 3D models for projects
-- Creating Procedural Shaders to texture object in blender
+- Creating **Procedural** Shaders to texture object in blender
 
 
 ### Additional skills
 
-- very good **communication** and **interpersonal** skills,
-- **reliable** and **focused** on providing high-quality products,
-- **fast learner** and always willing to **share knowledge**,
-- can **exit vim** ;).
+- very good **communication** and **interpersonal** skills
+- **reliable** and **focused** on providing high-quality products
+- **fast learner** and always willing to **share knowledge**
 
 ### Languages
 
-- English (fluent),
-- Hindi (native).
+- English (fluent)
