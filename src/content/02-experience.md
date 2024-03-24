@@ -33,6 +33,7 @@ as game-jams.
 - ##### July 2022 - Oct 2023
 
   ### Realm18Studios
+
   #### Assistant Story Writer and Basic Terrain Modeller
   
   - Created Terrain in Unity using sculpting tools and texture painting, used Blender
@@ -41,16 +42,18 @@ to make initial design
 
   > _Unity_ _Notion_ _Discord_
 
-##### April 2023 - Present
+- ##### April 2023 - Present
 
   ### Gen - Y
-#### Board Member of AR/VR Domain
+
+  #### Board Member of AR/VR Domain
   
   - Managed the Domain and maintained interest in the field among members
 
   > _Unity_ _AR Foundation_
 
 
+- #### June 7th 2004
   ### Born
 #### Human
   
