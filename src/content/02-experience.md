@@ -1,10 +1,10 @@
 ## Experience
 
-- ##### Janaury 2023 – Present
+- ##### Jan 2023 – Present
 
-  ### HyperVerge
+  ### Next Tech Lab
 
-  #### Board Member
+  #### Board Member of Pausch
   
 QS award-winning student-led research lab of 5 departments dedicated to working
 on latest technologies in their fields, including ML, Game and App Development,
@@ -13,24 +13,31 @@ Extended Reality, Cryptography/Cyber-Security and IOT.
   - Handled Management of Pausch Lab, taking interviews and handling events such
 as game-jams.
   - Participated in Events and contributed to Lab related Work
+  - Received guidance from great seniors and guided my juniors.
 
   > _Management_
 
-- ##### Jan 2023 – Present
+- ##### Feb 2024 – Present
 
-  ### Next Tech Lab
+  ### Insight XR
 
-  #### McCarthy Lab Member
+  #### VR Development Intern
   
-  A student led. internationally recognized research lab, honored with the prestigious QS Award,
+  A Data Analytics company that provides data for clients related to activity done in VR
 
-  - Received guidance from great seniors and guided my juniors.
+  - Created a Replay system for object transform data collection and distribution
+  - Created a way to serialize object and hand pose data for external use
 
-  > _Python_ _Tensorflow_ _Pytorch_
+  >_Unity_ _XR Interaction Toolkit_ _Ultimate XR_ _C#_ _NewtonSoft_
 
-- ##### March 10, 2004
+- ##### July 2022 - Oct 2023
 
-  ### Born
+  ### Realm18Studios
+  #### Assistant Story Writer and Basic Terrain Modeller
+  
+  - Created Terrain in Unity using sculpting tools and texture painting, used Blender
+to make initial design
+  - Made story elements for the game, including character back story, world lore, etc
 
 <style lang="scss">
   @import '../styles/theme.scss';
