@@ -33,8 +33,8 @@ as game-jams.
   - Built an AR application for customers to place furniture optimally in living spaces
   - Integrated generative AI to allow customers flexible texture options for their furniture
 
-  > _Unity__UI Toolkit__Unity Barracuda__Unity Sentris__Flutter__Vuforia__AR Foundation__ChatGPT_
-
+  > _Unity__UI Toolkit__Unity Barracuda__Unity Sentris__Flutter__Vuforia__AR Foundation_ _Firebase_
+ _ChatGPT_ 
 - ##### Feb 2024 – May 2024
 
   ### Insight XR
@@ -49,7 +49,7 @@ as game-jams.
   - Created an API for the Unity package for customers
   - Worked with others to allow replay of motion in real time through 3JS
 
-  > _Unity_ _XR Interaction Toolkit_ _Ultimate XR_ _C#_ _NewtonSoft_ _ThreeJs_ _Blender_
+  > _Unity_ _XR Interaction Toolkit_ _Ultimate XR_ _C#_ _NewtonSoft_ _ThreeJs_ _Blender_ _Amazon S3_
 
 - ##### July 2022 - Oct 2023
 
