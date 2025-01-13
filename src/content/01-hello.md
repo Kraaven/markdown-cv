@@ -6,6 +6,7 @@ In love with coding, sound, and visuals.
 
 - [kraaven.me](https://kraaven.me)
 - [dhruv.bhojaraj@gmail.com](mailto:dhruv.bhojaraj@gmail.com)
+- <a href="/resume.pdf" alt="Download Resume" target="_blank">Download Resume</a>
 
 ### Follow
 
