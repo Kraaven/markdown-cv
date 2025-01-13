@@ -8,27 +8,48 @@
   
 QS award-winning student-led research lab of 5 departments dedicated to working
 on latest technologies in their fields, including ML, Game and App Development,
-Extended Reality, Cryptography/Cyber-Security and IOT.
+Extended Reality, Cryptography/Cyber-Security and IOT
 
   - Handled Management of Pausch Lab, taking interviews and handling events such
 as game-jams.
   - Participated in Events and contributed to Lab related Work
-  - Received guidance from great seniors and guided my juniors.
+  - Received guidance from great seniors and guided my juniors
 
   > _Management_
 
-- ##### Feb 2024 – Present
+
+- ##### Sept 2024 - Jan 2024
+
+  ### Smollan (For Google)
+
+  #### AR Development Intern
+
+  A company that takes projects outsourced from other organizations.  In this case, through Google
+
+  - Created interaction advertisements using the Unity UI Toolkit
+  - Did R&D for running object detection Tflite models in Flutter
+  - Did R&D for executing TensorFlow and Onyx object detection in Unity
+  - Created object detection-based 3D advertisements for Google products via Vuforia
+  - Built an AR application for customers to place furniture optimally in living spaces
+  - Integrated generative AI to allow customers flexible texture options for their furniture
+
+  >_Unity__UI Toolkit__Unity Barracuda__Unity Sentris__Flutter__Vuforia__AR Foundation__ChatGPT_
+
+- ##### Feb 2024 – May 2024
 
   ### Insight XR
 
   #### VR Development Intern
   
-  A Data Analytics company that provides data for clients related to activity done in VR
+  A data analytics company that provides data for clients related to activity done in VR
 
-  - Created a Replay system for object transform data collection and distribution
-  - Created a way to serialize object and hand pose data for external use
+  - Created a replay system for object transform data collection and distribution
+  - Wrote data serialization for Object transforms and hand pose data for later use
+  - Handled seamless access and validation of customer API keys and uploaded data to the Amazon S3 bucket
+  - Created an API for the Unity package for customers
+  - Worked with others to allow replay of motion in real time through 3JS
 
-  >_Unity_ _XR Interaction Toolkit_ _Ultimate XR_ _C#_ _NewtonSoft_
+  >_Unity_ _XR Interaction Toolkit_ _Ultimate XR_ _C#_ _NewtonSoft_ _ThreeJs_ _Blender_
 
 - ##### July 2022 - Oct 2023
 
@@ -40,7 +61,7 @@ as game-jams.
 to make initial design
   - Made story elements for the game, including character back story, world lore, etc
 
-  > _Unity_ _Notion_ _Discord_
+  > _Unity_ _Blender_ _Notion_ _Discord_
 
 - ##### April 2023 - Present
 
