@@ -18,7 +18,7 @@ as game-jams.
   > _Management_
 
 
-- ##### Sept 2024 - Jan 2024
+- ##### Sept 2024 - Jan 2025
 
   ### Smollan (For Google)
 

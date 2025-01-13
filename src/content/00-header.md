@@ -2,4 +2,4 @@
 
 # Dhruv Bhojaraj
 
-and I'm a XR engineer.
+and I'm an XR Developer.
