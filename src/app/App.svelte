@@ -9,7 +9,7 @@
   import Projects from '../content/02.5-projects.md';
   import Education from '../content/04-education.md';
   import Hobby from '../content/05-hobby.md';
-  import Footer from '../content/06-footer.md';
+
 
   const sections = [
     { id: 'hello', component: Hello },
@@ -32,33 +32,4 @@
 
 <Intro />
 
-<main>
-  {#each sections as section}
-    <Section id={section.id}>
-      <svelte:component this={section.component} />
-    </Section>
-  {/each}
-<a href="/resume.pdf" alt="Download Resume" target="_blank">Download Resume</a>
-  <!-- <img src="images/me.jpeg" id="me" alt="Heisann" /> -->
-</main>
 
-<footer id="footer">
-  <Footer />
-</footer>
-
-<!-- <ForkMe /> -->
-
-<style lang="scss" global>
-  @import '../styles/global';
-
-  #me {
-    width: 100%;
-  }
-
-  #footer {
-    background-color: darken($background-color, 2%);
-    font-size: 0.875em;
-    padding-block: 3em;
-    text-align: center;
-  }
-</style>
