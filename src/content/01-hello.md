@@ -1,6 +1,6 @@
 ## About me
 
-An Aspiring XR developer with a Quest 2 in my hands...
+An XR developer with a Quest 2 in my hands...
 
 In love with coding, sound, and visuals.
 
@@ -10,4 +10,5 @@ In love with coding, sound, and visuals.
 ### Follow
 
 - [github.com/Kraaven](https://github.com/Kraaven)
+- [artstation.com/DhruvBhojaraj](https://www.artstation.com/dhruvbhojaraj5)
 - [/in/DhruvBhojaraj](https://www.linkedin.com/in/dhruv-bhojaraj-787485250/)
