@@ -40,3 +40,11 @@
   {/each}
 </main>
 
+<style lang="scss" global>
+  @import '../styles/global';
+
+  #me {
+    width: 100%;
+  }
+</style>
+
