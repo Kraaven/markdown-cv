@@ -26,12 +26,12 @@ as game-jams.
 
   A company that takes projects outsourced from other organizations.  In this case, through Google
 
-  - Created interaction advertisements using the Unity UI Toolkit
-  - Did R&D for running object detection Tflite models in Flutter
-  - Did R&D for executing TensorFlow and Onyx object detection in Unity
-  - Created object detection-based 3D advertisements for Google products via Vuforia
+  - Created interaction advertisements using the Unity UI Toolkit
+  - Did R&D for running object detection Tflite models in Flutter
+  - Did R&D for executing TensorFlow and Onyx object detection in Unity
+  - Created object detection-based 3D advertisements for Google products via Vuforia
   - Built an AR application for customers to place furniture optimally in living spaces
-  - Integrated generative AI to allow customers flexible texture options for their furniture
+  - Integrated generative AI to allow customers flexible texture options for their furniture
 
   >_Unity__UI Toolkit__Unity Barracuda__Unity Sentris__Flutter__Vuforia__AR Foundation__ChatGPT_
 
@@ -43,10 +43,10 @@ as game-jams.
   
   A data analytics company that provides data for clients related to activity done in VR
 
-  - Created a replay system for object transform data collection and distribution
+  - Created a replay system for object transform data collection and distribution
   - Wrote data serialization for Object transforms and hand pose data for later use
-  - Handled seamless access and validation of customer API keys and uploaded data to the Amazon S3 bucket
-  - Created an API for the Unity package for customers
+  - Handled seamless access and validation of customer API keys and uploaded data to the Amazon S3 bucket
+  - Created an API for the Unity package for customers
   - Worked with others to allow replay of motion in real time through 3JS
 
   >_Unity_ _XR Interaction Toolkit_ _Ultimate XR_ _C#_ _NewtonSoft_ _ThreeJs_ _Blender_
