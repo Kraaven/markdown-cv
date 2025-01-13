@@ -33,7 +33,7 @@ as game-jams.
   - Built an AR application for customers to place furniture optimally in living spaces
   - Integrated generative AI to allow customers flexible texture options for their furniture
 
-  > _Unity__UI Toolkit__Unity Barracuda__Unity Sentris__Flutter__Vuforia__AR Foundation_ _Firebase_
+  > _Unity_ _UI Toolkit_ _Unity Barracuda_ _Unity Sentris_ _Flutter_ _Vuforia_ _AR Foundation_ _Firebase_
  _ChatGPT_ 
 - ##### Feb 2024 – May 2024
 
