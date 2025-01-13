@@ -6,6 +6,7 @@
   import Hello from '../content/01-hello.md';
   import Experience from '../content/02-experience.md';
   import Skills from '../content/03-skills.md';
+  import Projects from '../content/02.5-projects.md';
   import Education from '../content/04-education.md';
   import Hobby from '../content/05-hobby.md';
   import Footer from '../content/06-footer.md';
@@ -14,6 +15,7 @@
     { id: 'hello', component: Hello },
     { id: 'experience', component: Experience },
     { id: 'skills', component: Skills },
+    { id: 'projects', component: Projects },
     { id: 'education', component: Education },
     { id: 'hobby', component: Hobby },
   ];
