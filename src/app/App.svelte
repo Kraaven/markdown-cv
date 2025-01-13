@@ -32,4 +32,11 @@
 
 <Intro />
 
+<main>
+  {#each sections as section}
+    <Section id={section.id}>
+      <svelte:component this={section.component} />
+    </Section>
+  {/each}
+</main>
 
