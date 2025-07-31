@@ -20,6 +20,17 @@ as game-jams.
 
 - ##### Sept 2024 - Jan 2025
 
+  ### Petals Studio 
+
+  #### Unity Game UI Development Intern 
+
+  A Game studio that is developing a mobile PVP game
+
+  - Developed Game UI using Unity UI Toolkit
+  - Rewrote major front end code to adhere to Unity specific principles and architecture
+  - Revamped 6+ old UI designs to standardize style across the entire game
+  - Wrote new Screens that take advantage of REST Apis to communicate and retrieve information about player and game static
+
   ### Smollan (For Google)
 
   #### AR Development Intern
