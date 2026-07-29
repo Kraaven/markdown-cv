@@ -30,7 +30,7 @@
   />
 </svelte:head>
 
-<Navigator {sections} />
+<Navigator sectionIds={sections.map((s) => s.id)} />
 <Intro />
 
 <main>
