@@ -1,7 +1,7 @@
 <script>
   import Section from '../components/Section.svelte';
   import Intro from '../components/Intro.svelte';
-  //import ForkMe from '../components/ForkMe.svelte.disable';
+  import Navigator from '../components/Navigator.svelte';
 
   import Hello from '../content/01-hello.md';
   import Experience from '../content/02-experience.md';
@@ -30,6 +30,7 @@
   />
 </svelte:head>
 
+<Navigator {sections} />
 <Intro />
 
 <main>
