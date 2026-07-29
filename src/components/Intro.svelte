@@ -204,7 +204,7 @@
     }
 
     @media screen and (orientation: portrait) {
-      min-height: 20vh;
+      min-height: 40vh;
       padding: 0;
     }
   }
