@@ -133,14 +133,10 @@
   @import '../styles/theme.scss';
 
   .navigator {
-    background-color: lighten($background-color, 3%);
-    border: 1px solid lighten($background-color, 10%);
-    border-radius: 6px;
     display: flex;
     flex-direction: column;
     gap: 0.6em;
     left: 3em;
-    padding: 1.2em 1.4em;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -159,9 +155,7 @@
     cursor: pointer;
     font-family: $font-family-monospace;
     text-align: left;
-    transition:
-      color 0.2s,
-      opacity 0.2s;
+    transition: color 0.2s, opacity 0.2s;
     white-space: nowrap;
   }
 
@@ -229,11 +223,6 @@
   }
 
   @media screen and (max-width: 1100px) {
-    .navigator {
-      padding: 1em 0.7em;
-    }
-
-    .nav-title,
     button.main span:not(.dot) {
       display: none;
     }
