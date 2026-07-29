@@ -35,7 +35,9 @@
       };
     });
 
-    const sectionEls = navItems.map((n) => document.getElementById(n.id)).filter(Boolean);
+    const sectionEls = navItems
+      .map((n) => document.getElementById(n.id))
+      .filter(Boolean);
 
     sectionObserver = new IntersectionObserver(
       (entries) => {
@@ -44,7 +46,7 @@
           if (entry.isIntersecting) activeId = entry.target.id;
         });
       },
-      { rootMargin: '-40% 0px -55% 0px' }
+      { rootMargin: '-40% 0px -55% 0px' },
     );
     sectionEls.forEach((el) => sectionObserver.observe(el));
 
@@ -57,7 +59,7 @@
           if (entry.isIntersecting) activeSubEl = entry.target;
         });
       },
-      { rootMargin: '-30% 0px -60% 0px' }
+      { rootMargin: '-30% 0px -60% 0px' },
     );
     allSubEls.forEach((el) => subObserver.observe(el));
 
@@ -100,6 +102,7 @@
 </script>
 
 <nav class="navigator">
+  <div class="nav-title">Outline</div>
   {#each navItems as item (item.id)}
     <div class="nav-group">
       <button
@@ -107,7 +110,6 @@
         class:active={activeId === item.id}
         on:click={() => goToSection(item.id)}
       >
-        <span class="dot" />
         {item.label}
       </button>
 
@@ -132,14 +134,31 @@
   @import '../styles/theme.scss';
 
   .navigator {
+    background-color: lighten($background-color, 3%);
+    border: 1px solid lighten($background-color, 10%);
+    border-radius: 6px;
     display: flex;
     flex-direction: column;
     gap: 0.6em;
-    left: 1.5em;
+    left: 3em;
+    padding: 1.2em 1.4em;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     z-index: 998;
+  }
+
+  .nav-title {
+    color: $heading-color;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4em;
+    text-transform: uppercase;
+
+    &::before {
+      content: '### ';
+      opacity: 0.6;
+    }
   }
 
   .nav-group {
@@ -151,29 +170,62 @@
   button.sub {
     background: none;
     border: none;
-    color: $text-color;
     cursor: pointer;
     font-family: $font-family-monospace;
     text-align: left;
-    transition: opacity 0.2s;
+    transition:
+      color 0.2s,
+      opacity 0.2s;
     white-space: nowrap;
   }
 
   button.main {
     align-items: center;
+    color: $text-color;
     display: flex;
-    font-size: 0.8em;
-    gap: 0.6em;
-    opacity: 0.5;
+    font-size: 0.85em;
+    gap: 0.5em;
+    opacity: 0.6;
     padding: 0.2em 0;
 
-    .dot {
-      background-color: $text-color;
-      border-radius: 50%;
-      flex-shrink: 0;
-      height: 6px;
-      transition: background-color 0.2s, transform 0.2s;
-      width: 6px;
+    &::before {
+      color: $heading-color;
+      content: '##';
+      opacity: 0.6;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &.active {
+      color: $heading-color;
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .subnav {
+    border-left: 1px solid lighten($background-color, 12%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    margin: 0.3em 0 0.3em 0.6em;
+    padding-left: 0.8em;
+  }
+
+  button.sub {
+    color: $text-color;
+    font-size: 0.75em;
+    opacity: 0.5;
+    padding: 0.1em 0;
+
+    &::before {
+      color: $list-color;
+      content: '- ';
     }
 
     &:hover {
@@ -181,43 +233,25 @@
     }
 
     &.active {
+      color: $string-color;
       opacity: 1;
 
-      .dot {
-        background-color: $string-color;
-        transform: scale(1.4);
+      &::before {
+        color: $string-color;
       }
     }
   }
 
-  .subnav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35em;
-    margin: 0.3em 0 0.3em 0.9em;
-    padding-left: 0.7em;
-    border-left: 1px solid lighten($background-color, 15%);
-  }
-
-  button.sub {
-    font-size: 0.7em;
-    opacity: 0.45;
-    padding: 0.1em 0;
-
-    &:hover {
-      opacity: 0.75;
-    }
-
-    &.active {
-      color: $string-color;
-      opacity: 1;
-    }
-  }
-
   @media screen and (max-width: 1100px) {
+    .navigator {
+      padding: 1em 0.7em;
+    }
+
+    .nav-title,
     button.main span:not(.dot) {
       display: none;
     }
+
     .subnav {
       display: none;
     }
