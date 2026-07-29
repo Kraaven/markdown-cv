@@ -102,7 +102,6 @@
 </script>
 
 <nav class="navigator">
-  <div class="nav-title">Outline</div>
   {#each navItems as item (item.id)}
     <div class="nav-group">
       <button
@@ -146,19 +145,6 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 998;
-  }
-
-  .nav-title {
-    color: $heading-color;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.4em;
-    text-transform: uppercase;
-
-    &::before {
-      content: '### ';
-      opacity: 0.6;
-    }
   }
 
   .nav-group {
