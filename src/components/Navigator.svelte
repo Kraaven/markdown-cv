@@ -1,5 +1,7 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
+  import { slide, fade } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
 
   // sections: [{ id: 'experience', showSubheadings: true }, ...]
   export let sections = [];
@@ -113,12 +115,16 @@
       </button>
 
       {#if expandedId === item.id && item.subheadings.length}
-        <div class="subnav">
-          {#each item.subheadings as sub (sub.key)}
+        <div
+          class="subnav"
+          transition:slide={{ duration: 300, easing: quintOut }}
+        >
+          {#each item.subheadings as sub, i (sub.key)}
             <button
               class="sub"
               class:active={activeSubEl === sub.el}
               on:click={() => goToSub(sub.el)}
+              in:fade={{ duration: 250, delay: i * 60 }}
             >
               {sub.label}
             </button>
@@ -155,7 +161,9 @@
     cursor: pointer;
     font-family: $font-family-monospace;
     text-align: left;
-    transition: color 0.2s, opacity 0.2s;
+    transition:
+      color 0.2s,
+      opacity 0.2s;
     white-space: nowrap;
   }
 
