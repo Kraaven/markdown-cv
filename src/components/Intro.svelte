@@ -194,8 +194,8 @@
     display: flex;
     flex-direction: column;
     font-size: 1.25em;
-    justify-content: flex-end;
-    min-height: 80vh;
+    justify-content: center;
+    min-height: 40vh;
     padding: 3em;
 
     .wrapper {
@@ -204,7 +204,7 @@
     }
 
     @media screen and (orientation: portrait) {
-      min-height: 60vh;
+      min-height: 20vh;
       padding: 0;
     }
   }
