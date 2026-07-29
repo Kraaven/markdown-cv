@@ -12,12 +12,12 @@
 
 
   const sections = [
-    { id: 'hello', component: Hello },
-    { id: 'experience', component: Experience },
-    { id: 'projects', component: Projects },
-    { id: 'skills', component: Skills },
-    { id: 'education', component: Education },
-    { id: 'hobby', component: Hobby },
+    { id: 'hello', component: Hello, showSubheadings: false },
+    { id: 'experience', component: Experience, showSubheadings: true },
+    { id: 'projects', component: Projects, showSubheadings: true },
+    { id: 'skills', component: Skills, showSubheadings: false },
+    { id: 'education', component: Education, showSubheadings: false },
+    { id: 'hobby', component: Hobby, showSubheadings: false },
   ];
 </script>
 
@@ -30,7 +30,8 @@
   />
 </svelte:head>
 
-<Navigator sectionIds={sections.map((s) => s.id)} />
+<!-- <Navigator sectionIds={sections.map((s) => s.id)} /> -->
+<Navigator {sections} />
 <Intro />
 
 <main>

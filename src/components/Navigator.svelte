@@ -1,7 +1,8 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
 
-  export let sectionIds = [];
+  // sections: [{ id: 'experience', showSubheadings: true }, ...]
+  export let sections = [];
 
   let navItems = [];
   let activeId = null;
@@ -9,19 +10,23 @@
   let sectionObserver;
   let subObserver;
 
+  let isNavigating = false; // true while a click-triggered scroll is in flight
+  let scrollFinishTimer;
+
   onMount(async () => {
     await tick(); // let markdown content render first
 
-    navItems = sectionIds.map((id) => {
+    navItems = sections.map(({ id, showSubheadings = true }) => {
       const el = document.getElementById(id);
       const heading = el?.querySelector('h2');
-      const subheadings = el
-        ? Array.from(el.querySelectorAll('h3')).map((h3, i) => ({
-            el: h3,
-            label: h3.textContent.trim(),
-            key: `${id}-${i}`,
-          }))
-        : [];
+      const subheadings =
+        showSubheadings && el
+          ? Array.from(el.querySelectorAll('h3')).map((h3, i) => ({
+              el: h3,
+              label: h3.textContent.trim(),
+              key: `${id}-${i}`,
+            }))
+          : [];
 
       return {
         id,
@@ -34,6 +39,7 @@
 
     sectionObserver = new IntersectionObserver(
       (entries) => {
+        if (isNavigating) return; // ignore pass-through intersections during a click-scroll
         entries.forEach((entry) => {
           if (entry.isIntersecting) activeId = entry.target.id;
         });
@@ -46,6 +52,7 @@
 
     subObserver = new IntersectionObserver(
       (entries) => {
+        if (isNavigating) return;
         entries.forEach((entry) => {
           if (entry.isIntersecting) activeSubEl = entry.target;
         });
@@ -53,18 +60,37 @@
       { rootMargin: '-30% 0px -60% 0px' }
     );
     allSubEls.forEach((el) => subObserver.observe(el));
+
+    // Universal "has scrolling stopped?" detector — works regardless of
+    // scroll distance/speed/browser, unlike a fixed setTimeout guess.
+    window.addEventListener('scroll', onWindowScroll, { passive: true });
   });
 
   onDestroy(() => {
     sectionObserver?.disconnect();
     subObserver?.disconnect();
+    window.removeEventListener('scroll', onWindowScroll);
+    clearTimeout(scrollFinishTimer);
   });
 
+  function onWindowScroll() {
+    if (!isNavigating) return;
+    clearTimeout(scrollFinishTimer);
+    scrollFinishTimer = setTimeout(() => {
+      isNavigating = false; // scroll settled — hand control back to the observers
+    }, 150);
+  }
+
   function goToSection(id) {
+    isNavigating = true;
+    activeId = id;
+    activeSubEl = null; // reset until the observer (or user) picks a subheading
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
 
   function goToSub(el) {
+    isNavigating = true;
+    activeSubEl = el;
     el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
@@ -193,7 +219,7 @@
       display: none;
     }
     .subnav {
-      display: none; // no room to show labels for sub-items either
+      display: none;
     }
   }
 
