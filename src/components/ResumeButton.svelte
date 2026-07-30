@@ -1,4 +1,4 @@
-<class="resume-button"
+<a class="resume-button"
   href="/resume.pdf"
   download
   target="_blank"
