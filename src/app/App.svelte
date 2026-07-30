@@ -2,6 +2,7 @@
   import Section from '../components/Section.svelte';
   import Intro from '../components/Intro.svelte';
   import Navigator from '../components/Navigator.svelte';
+  import ResumeButton from '../components/ResumeButton.svelte';
 
   import Hello from '../content/01-hello.md';
   import Experience from '../content/02-experience.md';
@@ -32,6 +33,7 @@
 
 <!-- <Navigator sectionIds={sections.map((s) => s.id)} /> -->
 <Navigator {sections} />
+<ResumeButton />
 <Intro />
 
 <main>
