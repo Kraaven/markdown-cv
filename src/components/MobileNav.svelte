@@ -1,7 +1,6 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
-  import { fade, fly } from 'svelte/transition';
-  import { quintOut } from 'svelte/easing';
+  import { fade } from 'svelte/transition';
 
   export let sections = [];
 
@@ -51,27 +50,35 @@
 
 <div class="mobile-nav">
   <button
-    class="hamburger"
+    class="toggle"
     class:open
     on:click={toggle}
-    aria-label="Toggle navigation"
+    aria-label={open ? 'Close navigation' : 'Open navigation'}
     aria-expanded={open}
   >
-    <span></span>
-    <span></span>
-    <span></span>
+    {#if open}
+      <span class="esc" transition:fade={{ duration: 120 }}>
+        <span class="bracket">[</span>Esc<span class="bracket">]</span>
+      </span>
+    {:else}
+      <span class="bars">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    {/if}
   </button>
 
   {#if open}
-    <nav class="tray" transition:fly={{ y: -10, duration: 200, easing: quintOut }}>
+    <nav class="tray">
       {#each navItems as item, i (item.id)}
         <button
           class="tray-item"
           on:click={() => goTo(item.id)}
           in:fade={{ duration: 150, delay: i * 40 }}
+          out:fade={{ duration: 100 }}
         >
-          {item.label}
-          <span class="prompt">#</span>
+          <span class="mark">-</span>{item.label}
         </button>
       {/each}
     </nav>
@@ -85,103 +92,89 @@
     display: none;
   }
 
-.hamburger {
-    align-items: center;
-    background-color: lighten($background-color, 6%);
-    border: 1px solid lighten($background-color, 15%);
-    border-radius: 4px;
+  .toggle {
+    background: none;
+    border: none;
     cursor: pointer;
+    padding: 0.5em;
+    position: fixed;
+    right: 1.2em;
+    top: 5.2em;
+    z-index: 999;
+  }
+
+  .bars {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    justify-content: center;
-    padding: 0.7em 0.9em;
-    position: fixed;
-    right: 1em;
-    top: 5.2em;
-    transition: background-color 0.2s, border-color 0.2s;
-    z-index: 999;
   }
 
-  .hamburger span {
+  .bars span {
     background-color: $text-color;
-    border-radius: 1px;
     display: block;
     height: 2px;
-    transition: transform 0.25s, opacity 0.2s, background-color 0.2s;
+    transition: background-color 0.2s;
     width: 18px;
   }
 
-  .hamburger:hover {
-    background-color: lighten($background-color, 10%);
-    border-color: $string-color;
-  }
-
-  .hamburger.open span {
+  .toggle:hover .bars span,
+  .toggle.open .bars span {
     background-color: $heading-color;
   }
 
-  .hamburger.open span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+  .esc {
+    color: $heading-color;
+    font-family: $font-family-monospace;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
   }
 
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
+  .esc .bracket {
+    color: $link-color;
   }
 
-  .hamburger.open span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-
-.tray {
-    background-color: lighten($background-color, 4%);
-    border: 1px solid lighten($background-color, 15%);
-    border-radius: 6px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  .tray {
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
-    gap: 0.2em;
-    padding: 0.6em;
     position: fixed;
-    right: 1em;
-    top: 8em;
-    width: 60vw;
-    max-width: 260px;
-    z-index: 999;
+    right: 1.2em;
+    top: 8.4em;
+    width: max-content;
+    z-index: 998;
   }
 
   .tray-item {
     background: none;
     border: none;
-    border-radius: 4px;
     color: $text-color;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
     font-family: $font-family-monospace;
     font-size: 0.8em;
     font-weight: 400;
-    letter-spacing: 0.02em;
-    padding: 0.5em 0.6em;
+    letter-spacing: 0.12em;
+    line-height: 2.2;
+    opacity: 0.75;
+    padding: 0;
     text-align: right;
-    transition: background-color 0.15s, color 0.15s, padding-right 0.15s;
+    text-transform: uppercase;
+    transition: color 0.15s, opacity 0.15s;
   }
 
-  .tray-item .prompt {
-    color: $heading-color;
-    margin-left: 0.5em;
+  .tray-item .mark {
+    color: $list-color;
+    margin-right: 0.5em;
     opacity: 0.7;
     transition: color 0.15s, opacity 0.15s;
   }
 
   .tray-item:hover {
-    background-color: lighten($background-color, 8%);
     color: $string-color;
-    padding-right: 0.9em;
+    opacity: 1;
   }
 
-  .tray-item:hover .prompt {
+  .tray-item:hover .mark {
     color: $string-color;
     opacity: 1;
   }

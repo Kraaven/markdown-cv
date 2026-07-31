@@ -1,18 +1,18 @@
 {
-  "name": "@ajdjyt/markdown-cv",
+  "name": "@kraaven/portfolio-website",
   "version": "2024.0.0",
-  "description": "Arnav Fernandes – Curriculum Vitae",
-  "author": "Arnav Fernandes <ajdjking@gmail.com>",
+  "description": "Dhruv Bhojaraj – Curriculum Vitae",
+  "author": "Dhruv Bhojaraj <dhruv.bhojaraj@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ajdjyt/markdown-cv.git"
+    "url": "git+https://github.com/Kraaven/portfolio-website.git"
   },
   "keywords": [
     "cv",
     "resume",
     "webdeveloper"
   ],
-  "homepage": "https://cv.arjf.me/",
+  "homepage": "https://portfolio.kraaven.net/",
   "private": true,
   "scripts": {
     "start": "sirv public",
