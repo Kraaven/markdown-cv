@@ -70,8 +70,8 @@
           on:click={() => goTo(item.id)}
           in:fade={{ duration: 150, delay: i * 40 }}
         >
-          <span class="prompt">#</span>
           {item.label}
+          <span class="prompt">#</span>
         </button>
       {/each}
     </nav>
@@ -85,7 +85,7 @@
     display: none;
   }
 
-  .hamburger {
+.hamburger {
     align-items: center;
     background-color: lighten($background-color, 6%);
     border: 1px solid lighten($background-color, 15%);
@@ -98,7 +98,7 @@
     padding: 0.7em 0.9em;
     position: fixed;
     right: 1em;
-    top: 3.6em;
+    top: 5.2em;
     transition: background-color 0.2s, border-color 0.2s;
     z-index: 999;
   }
@@ -133,7 +133,7 @@
     transform: translateY(-6px) rotate(-45deg);
   }
 
-  .tray {
+.tray {
     background-color: lighten($background-color, 4%);
     border: 1px solid lighten($background-color, 15%);
     border-radius: 6px;
@@ -144,7 +144,7 @@
     padding: 0.6em;
     position: fixed;
     right: 1em;
-    top: 6.4em;
+    top: 8em;
     width: 60vw;
     max-width: 260px;
     z-index: 999;
@@ -156,25 +156,34 @@
     border-radius: 4px;
     color: $text-color;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     font-family: $font-family-monospace;
-    font-size: 0.85em;
-    padding: 0.6em 0.7em;
-    text-align: left;
-    transition: background-color 0.15s, color 0.15s;
+    font-size: 0.8em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    padding: 0.5em 0.6em;
+    text-align: right;
+    transition: background-color 0.15s, color 0.15s, padding-right 0.15s;
   }
 
   .tray-item .prompt {
     color: $heading-color;
-    margin-right: 0.4em;
+    margin-left: 0.5em;
+    opacity: 0.7;
+    transition: color 0.15s, opacity 0.15s;
   }
 
   .tray-item:hover {
-    background-color: lighten($background-color, 10%);
+    background-color: lighten($background-color, 8%);
     color: $string-color;
+    padding-right: 0.9em;
   }
 
   .tray-item:hover .prompt {
     color: $string-color;
+    opacity: 1;
   }
 
   @media screen and (max-width: 700px) {
