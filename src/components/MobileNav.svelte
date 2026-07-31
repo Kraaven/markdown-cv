@@ -121,7 +121,12 @@
   .toggle.open .bars span {
     background-color: $heading-color;
   }
-
+  
+@media (hover: hover) {
+  .toggle:hover .bars span {
+    background-color: $heading-color;
+  }
+}
   .esc {
     color: $heading-color;
     font-family: $font-family-monospace;
