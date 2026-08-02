@@ -1,4 +1,3 @@
-```svelte
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
   import { fade, slide } from 'svelte/transition';
@@ -262,7 +261,7 @@
     right: 1em;
     top: 8.2em;
 
-    width: 255px;
+    width: 175px;
     z-index: 999;
   }
 
@@ -360,7 +359,7 @@
    */
   .label {
     font-family: $font-family-monospace;
-    font-size: 0.68em;
+    font-size: 0.75em;
     letter-spacing: 0.045em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -415,4 +414,3 @@
     }
   }
 </style>
-```
