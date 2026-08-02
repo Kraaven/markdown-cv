@@ -20,7 +20,7 @@
     <path d="M7 10l5 5 5-5" />
     <path d="M4 19h16" />
   </svg>
-  <span>resume</span>
+  <span>Resume</span>
 </a>
 
 <style lang="scss">
