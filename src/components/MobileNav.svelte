@@ -85,6 +85,7 @@
     ></button>
   {/if}
 
+  <!-- Mobile navigation toggle -->
   <button
     class="toggle"
     class:open
@@ -93,15 +94,17 @@
     aria-expanded={open}
     aria-controls="mobile-navigation"
   >
-    <span class="toggle-label">
-      {open ? 'close' : 'menu'}
-    </span>
-
-    <span class="icon" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
+    {#if open}
+      <span class="esc">
+        <span class="bracket">[</span>Esc<span class="bracket">]</span>
+      </span>
+    {:else}
+      <span class="bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    {/if}
   </button>
 
   {#if open}
@@ -110,7 +113,7 @@
       class="tray"
       aria-label="Mobile navigation"
       transition:slide={{
-        duration: 220,
+        duration: 200,
         easing: quintOut
       }}
     >
@@ -126,12 +129,12 @@
             class:active={activeId === item.id}
             on:click={() => goTo(item.id)}
             in:fade={{
-              duration: 160,
-              delay: i * 30
+              duration: 140,
+              delay: i * 25
             }}
           >
             <span class="indicator" aria-hidden="true">
-              {activeId === item.id ? '>' : ' '}
+              {activeId === item.id ? '>' : ''}
             </span>
 
             <span class="number">
@@ -143,11 +146,6 @@
             </span>
           </button>
         {/each}
-      </div>
-
-      <div class="tray-footer">
-        <span>ESC</span>
-        <span>TO CLOSE</span>
       </div>
     </nav>
   {/if}
@@ -161,12 +159,10 @@
   }
 
   /*
-   * The backdrop sits below the menu but above the page.
-   * This makes the whole rest of the screen a reliable
-   * "close menu" target.
+   * Invisible click-away layer.
    */
   .backdrop {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.2);
     border: 0;
     inset: 0;
     position: fixed;
@@ -174,10 +170,10 @@
   }
 
   /*
-   * Large, deliberate touch target.
+   * Match the visual language of ResumeButton.svelte.
    *
-   * The visual icon is small, but the actual button is
-   * 44x44px minimum.
+   * The actual button is larger than the hamburger itself,
+   * giving it a reliable mobile touch target.
    */
   .toggle {
     align-items: center;
@@ -187,97 +183,101 @@
     color: $text-color;
     cursor: pointer;
     display: flex;
-    gap: 0.6em;
     justify-content: center;
     min-height: 44px;
-    min-width: 76px;
-    padding: 0.55em 0.75em;
+    min-width: 44px;
+    padding: 0.6em 0.75em;
     position: fixed;
     right: 1em;
-    top: 1em;
+    top: 4.8em;
     z-index: 1000;
 
     -webkit-tap-highlight-color: transparent;
 
     transition:
-      border-color 0.2s,
       background-color 0.2s,
+      border-color 0.2s,
       transform 0.15s;
   }
 
   .toggle:hover {
-    border-color: $heading-color;
+    background-color: lighten($background-color, 6%);
+    border-color: $string-color;
   }
 
   .toggle:active {
-    transform: scale(0.96);
-  }
-
-  .toggle-label {
-    color: $text-color;
-    font-family: $font-family-monospace;
-    font-size: 0.7em;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .icon {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    width: 16px;
-  }
-
-  .icon span {
-    background-color: $heading-color;
-    display: block;
-    height: 2px;
-    transition:
-      transform 0.2s,
-      opacity 0.2s;
-    width: 16px;
+    transform: translateY(0);
   }
 
   /*
-   * Turn hamburger into an X.
-   * This is much easier to understand than replacing
-   * the entire control with "[Esc]".
+   * Hamburger
    */
-  .toggle.open .icon span:nth-child(1) {
-    transform: translateY(5px) rotate(45deg);
+  .bars {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 18px;
   }
 
-  .toggle.open .icon span:nth-child(2) {
-    opacity: 0;
+  .bars span {
+    background-color: $heading-color;
+    display: block;
+    height: 2px;
+    width: 18px;
   }
 
-  .toggle.open .icon span:nth-child(3) {
-    transform: translateY(-5px) rotate(-45deg);
+  /*
+   * [Esc] close state.
+   */
+  .esc {
+    color: $heading-color;
+    font-family: $font-family-monospace;
+    font-size: 0.72em;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
   }
 
+  .esc .bracket {
+    color: $link-color;
+  }
+
+  /*
+   * Navigation panel.
+   *
+   * Width is deliberately compact rather than using
+   * max-content over the entire available area.
+   */
   .tray {
     background-color: $background-color;
     border: 1px solid lighten($background-color, 15%);
-    border-radius: 5px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     position: fixed;
+
+    /*
+     * Align directly underneath the mobile button.
+     */
     right: 1em;
-    top: 4.8em;
-    width: min(320px, calc(100vw - 2em));
+    top: 8.2em;
+
+    width: 255px;
     z-index: 999;
   }
 
+  /*
+   * Compact terminal-style header.
+   */
   .tray-header {
     align-items: center;
     border-bottom: 1px solid lighten($background-color, 10%);
     display: flex;
     font-family: $font-family-monospace;
-    font-size: 0.7em;
+    font-size: 0.62em;
     justify-content: space-between;
-    letter-spacing: 0.08em;
-    padding: 0.9em 1.1em;
+    letter-spacing: 0.06em;
+    padding: 0.65em 0.9em;
     text-transform: uppercase;
   }
 
@@ -290,16 +290,15 @@
     opacity: 0.8;
   }
 
+  /*
+   * Navigation items.
+   */
   .items {
     display: flex;
     flex-direction: column;
-    padding: 0.5em;
+    padding: 0.35em;
   }
 
-  /*
-   * Every navigation item has a large touch target.
-   * 48px minimum height is intentional.
-   */
   .tray-item {
     align-items: center;
     background: transparent;
@@ -308,9 +307,16 @@
     color: $text-color;
     cursor: pointer;
     display: grid;
-    grid-template-columns: 18px 28px 1fr;
-    min-height: 48px;
-    padding: 0.65em 0.75em;
+
+    /*
+     * Compact columns:
+     *
+     * > | 01 | PROJECTS
+     */
+    grid-template-columns: 14px 25px 1fr;
+
+    min-height: 42px;
+    padding: 0.35em 0.55em;
     text-align: left;
     width: 100%;
 
@@ -329,24 +335,37 @@
     background-color: lighten($background-color, 10%);
   }
 
+  /*
+   * Active section marker.
+   */
   .indicator {
     color: $heading-color;
     font-family: $font-family-monospace;
+    font-size: 0.8em;
     font-weight: 600;
   }
 
+  /*
+   * Section numbers.
+   */
   .number {
     color: $list-color;
     font-family: $font-family-monospace;
-    font-size: 0.7em;
-    opacity: 0.6;
+    font-size: 0.62em;
+    opacity: 0.55;
   }
 
+  /*
+   * Section title.
+   */
   .label {
     font-family: $font-family-monospace;
-    font-size: 0.78em;
-    letter-spacing: 0.06em;
+    font-size: 0.68em;
+    letter-spacing: 0.045em;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .tray-item.active {
@@ -357,23 +376,9 @@
     opacity: 1;
   }
 
-  .tray-footer {
-    border-top: 1px solid lighten($background-color, 10%);
-    color: $text-color;
-    display: flex;
-    font-family: $font-family-monospace;
-    font-size: 0.6em;
-    justify-content: flex-end;
-    letter-spacing: 0.1em;
-    gap: 0.5em;
-    opacity: 0.45;
-    padding: 0.8em 1.1em;
-  }
-
-  .tray-footer span:first-child {
-    color: $link-color;
-  }
-
+  /*
+   * Mobile only.
+   */
   @media screen and (max-width: 700px) {
     .mobile-nav {
       display: block;
@@ -385,17 +390,18 @@
    */
   @media screen and (max-width: 380px) {
     .toggle {
-      min-width: 44px;
-      width: 44px;
-    }
-
-    .toggle-label {
-      display: none;
+      right: 0.75em;
+      top: 4.6em;
     }
 
     .tray {
       right: 0.75em;
-      width: calc(100vw - 1.5em);
+      top: 7.9em;
+      width: 235px;
+    }
+
+    .tray-item {
+      min-height: 40px;
     }
   }
 
@@ -404,7 +410,6 @@
    */
   @media (prefers-reduced-motion: reduce) {
     .toggle,
-    .icon span,
     .tray-item {
       transition: none;
     }
